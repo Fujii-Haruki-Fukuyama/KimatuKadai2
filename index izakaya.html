@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="居酒屋">
+<meta name="description" content="居酒屋">
+<title>居酒屋</title>
+<link href="izakaya.css" media="all" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<style>
+#currentTime {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+</style>
+
+</head>
+
+<body>
+
+<p id="currentTime"></p>
+
+<header>
+<h1>居酒屋 新時代 広島福山元町店</h1>
+</header>
+
+<div>
+<nav>
+<ul>
+<li><a href="index izakaya.html">トップ</a></li>
+<li><a href="menu izakaya.html">お品書き</a></li>
+<li><a href="about izakaya.html">こだわり</a></li>
+<li><a href="access izakaya.html">アクセス</a></li>
+</ul>
+</nav>
+
+<main>
+
+<p>
+<img src="image/unnamed.webp" alt="店写真" width="500" height="350">
+</p>
+
+<section>
+<h2>お店の紹介</h2>
+
+<h3>揚げ皮串発祥の店『新時代』</h3>
+<p>
+『新時代』は安くて賑やかに楽しめる居酒屋です。<br>
+激安居酒屋チェーン店として全国に展開しており、幅広いジャンルが楽しめるメニューを日常価格でお楽しみ頂けます。
+</p>
+</section>
+
+<section>
+<h2>おすすめ３品</h2>
+</section>
+
+<section>
+<h3>伝串（新時代ピラミッド）</h3>
+
+<img src="image/P046271899_480.jpg" alt="伝串">
+
+<h4>【日本一のパリモチ鶏皮串】見た目も味も美しい人気のグルメ</h4>
+<p>
+2010年販売直後から愛され、現在、累計販売本数2億本を突破。<br>
+新時代ピラミッドは伝串を36本（8段）、綺麗な山型のピラミッドで提供されます。
+</p>
+</section>
+
+<section>
+<h3>プリンセス焼き</h3>
+
+<img src="image/P046271957_480.jpg" alt="プリンセス焼き">
+
+<h4>【人気No.2】鶏10羽分の白ハラミを贅沢に使用</h4>
+<p>
+柔らかくてジューシーな肉の食感に、口の中で広がる豊かな旨み。<br>
+噛むたびに肉の美味しさが口いっぱいに広がる、肉好きの方におすすめの逸品です。
+</p>
+</section>
+
+<section>
+<h3>どる焼き</h3>
+
+<img src="image/P046271960_480.jpg" alt="どる焼き">
+
+<h4>【人気No.1】一口噛めば肉汁があふれ出す！！</h4>
+<p>
+「超肉汁！超弾力！超旨味！」のどる焼き！！<br>
+自慢の岩塩とこだわりの鶏肉の相乗効果で、噛めば噛むほど味が出る大人気の逸品です。
+</p>
+</section>
+
+<br>
+<br>
+
+<nav>
+<ul>
+<li><a href="index izakaya.html">トップ</a></li>
+<li><a href="menu izakaya.html">お品書き</a></li>
+<li><a href="about izakaya.html">こだわり</a></li>
+<li><a href="access izakaya.html">アクセス</a></li>
+</ul>
+</nav>
+
+<br>
+<br>
+
+</main>
+</div>
+
+<footer>
+<p>Copyright 2026.</p>
+</footer>
+
+<script>
+function updateTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const hour = now.getHours();
+  const minute = now.getMinutes().toString().padStart(2, '0');
+  const second = now.getSeconds().toString().padStart(2, '0');
+
+  document.getElementById("currentTime").textContent =
+    "現在の日時： " + year + "年" + month + "月" + day + "日 " +
+    hour + "時" + minute + "分" + second + "秒";
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>
