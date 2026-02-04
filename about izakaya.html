@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="居酒屋">
+<meta name="description" content="居酒屋">
+<title>居酒屋</title>
+<link href="izakaya.css" media="all" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  overflow-y: scroll;
+}
+
+#currentTime {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+</style>
+
+</head>
+
+<body>
+
+<p id="currentTime"></p>
+
+<header>
+<h1>居酒屋 新時代 広島福山元町店</h1>
+</header>
+
+<div>
+<nav>
+<ul>
+<li><a href="index izakaya.html">トップ</a></li>
+<li><a href="menu izakaya.html">お品書き</a></li>
+<li><a href="about izakaya.html">こだわり</a></li>
+<li><a href="access izakaya.html">アクセス</a></li>
+</ul>
+</nav>
+
+<main>
+<section>
+<h2>こだわり</h2>
+
+<h3>圧倒的コストパフォーマンス</h3>
+<p>
+料理もドリンクもリーズナブルな価格設定。<br>
+気軽な一杯から仲間との飲み会まで、満足度の高いコスパを追求しています。
+</p>
+
+<br>
+<br>
+
+<h3>活気ある大衆居酒屋の雰囲気</h3>
+<p>
+店内は明るくにぎやかで、初めての方でも入りやすい空間。<br>
+お一人様からグループまで、幅広いシーンでご利用いただけます。
+</p>
+
+<br>
+<br>
+
+</section>
+
+<nav>
+<ul>
+<li><a href="index izakaya.html">トップ</a></li>
+<li><a href="menu izakaya.html">お品書き</a></li>
+<li><a href="about izakaya.html">こだわり</a></li>
+<li><a href="access izakaya.html">アクセス</a></li>
+</ul>
+</nav>
+
+<br>
+<br>
+
+</main>
+</div>
+
+<footer>
+<p>Copyright 2026.</p>
+</footer>
+
+<script>
+function updateTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const hour = now.getHours();
+  const minute = now.getMinutes().toString().padStart(2, '0');
+  const second = now.getSeconds().toString().padStart(2, '0');
+
+  document.getElementById("currentTime").textContent =
+    "現在の日時： " + year + "年" + month + "月" + day + "日 " +
+    hour + "時" + minute + "分" + second + "秒";
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>
