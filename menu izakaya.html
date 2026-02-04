@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="居酒屋">
+<meta name="description" content="居酒屋">
+<title>居酒屋</title>
+<link href="izakaya.css" media="all" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<style>
+#currentTime {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+</style>
+
+</head>
+
+<body>
+
+<p id="currentTime"></p>
+
+<header>
+<h1>居酒屋 新時代 広島福山元町店</h1>
+</header>
+
+<div>
+<nav>
+<ul>
+<li><a href="index izakaya.html">トップ</a></li>
+<li><a href="menu izakaya.html">お品書き</a></li>
+<li><a href="about izakaya.html">こだわり</a></li>
+<li><a href="access izakaya.html">アクセス</a></li>
+</ul>
+</nav>
+
+<main>
+<section>
+<h2>お品書き</h2>
+
+<h3>フード</h3>
+<table>
+<tr>
+<th><img src="image/P035762424_238.jpg" alt="伝串"></th>
+<td class="item">伝串</td>
+<td class="price">50円</td>
+</tr>
+
+<tr>
+<th><img src="image/P046271895_238.jpg" alt="伝串ピラミッド 中"></th>
+<td class="item">【伝串ピラミッド】 中ピラミッド</td>
+<td class="price">500円</td>
+</tr>
+
+<tr>
+<th><img src="image/P046271897_238.jpg" alt="伝串ピラミッド 大"></th>
+<td class="item">【伝串ピラミッド】 大ピラミッド</td>
+<td class="price">1050円</td>
+</tr>
+
+<tr>
+<th><img src="image/P046271899_238.jpg" alt="新時代ピラミッド"></th>
+<td class="item">【伝串ピラミッド】 新時代ピラミッド</td>
+<td class="price">1800円</td>
+</tr>
+
+<tr>
+<th><img src="image/P049076233_238.jpg" alt="とり刺しユッケ"></th>
+<td class="item">とり刺しユッケ</td>
+<td class="price">480円</td>
+</tr>
+
+<tr>
+<th><img src="image/P049076234_238.jpg" alt="塩ダレキャベツ"></th>
+<td class="item">自家製塩ダレの塩ダレキャベツ</td>
+<td class="price">280円</td>
+</tr>
+
+<tr>
+<th><img src="image/P049076237_238.jpg" alt="枝豆"></th>
+<td class="item">枝豆</td>
+<td class="price">280円</td>
+</tr>
+
+<tr>
+<th><img src="image/P049076239_238.jpg" alt="生ごぼう天"></th>
+<td class="item">生ごぼう天</td>
+<td class="price">380円</td>
+</tr>
+
+<tr>
+<th><img src="image/P046271960_480.jpg" alt="どる焼き"></th>
+<td class="item">どる焼き</td>
+<td class="price">480円</td>
+</tr>
+
+<tr>
+<th><img src="image/P049076242_238.jpg" alt="ソース豚串カツ"></th>
+<td class="item">ソース豚串カツ</td>
+<td class="price">250円</td>
+</tr>
+
+<tr>
+<th><img src="image/P046271957_480.jpg" alt="プリンセス焼き"></th>
+<td class="item">プリンセス焼き</td>
+<td class="price">580円</td>
+</tr>
+
+<tr>
+<th><img src="image/P049076258_238.jpg" alt="揚げ出し豆腐"></th>
+<td class="item">揚げ出し豆腐</td>
+<td class="price">380円</td>
+</tr>
+</table>
+
+<h3>ドリンク</h3>
+<table>
+<tr>
+<td class="item">生ビール</td>
+<td class="price">190円</td>
+</tr>
+
+<tr>
+<td class="item">ハイボール</td>
+<td class="price">150円</td>
+</tr>
+
+<tr>
+<td class="item">メガハイボール</td>
+<td class="price">450円</td>
+</tr>
+
+<tr>
+<td class="item">ジンジャーハイボール</td>
+<td class="price">350円</td>
+</tr>
+
+<tr>
+<td class="item">昔ながらのパンチレモンサワー</td>
+<td class="price">290円</td>
+</tr>
+
+<tr>
+<td class="item">ウーロン茶</td>
+<td class="price">290円</td>
+</tr>
+
+<tr>
+<td class="item">コーラ</td>
+<td class="price">290円</td>
+</tr>
+</table>
+</section>
+
+<br>
+<br>
+
+<nav>
+<ul>
+<li><a href="index izakaya.html">トップ</a></li>
+<li><a href="menu izakaya.html">お品書き</a></li>
+<li><a href="about izakaya.html">こだわり</a></li>
+<li><a href="access izakaya.html">アクセス</a></li>
+</ul>
+</nav>
+
+<br>
+<br>
+
+</main>
+</div>
+
+<footer>
+<p>Copyright 2026.</p>
+</footer>
+
+<script>
+function updateTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const hour = now.getHours();
+  const minute = now.getMinutes().toString().padStart(2, '0');
+  const second = now.getSeconds().toString().padStart(2, '0');
+
+  document.getElementById("currentTime").textContent =
+    "現在の日時： " + year + "年" + month + "月" + day + "日 " +
+    hour + "時" + minute + "分" + second + "秒";
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>
