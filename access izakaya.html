@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="居酒屋">
+<meta name="description" content="居酒屋">
+<title>居酒屋</title>
+<link href="izakaya.css" media="all" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<style>
+#currentTime {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+</style>
+
+</head>
+
+<body>
+
+<p id="currentTime"></p>
+
+<header>
+<h1>居酒屋 新時代 広島福山元町店</h1>
+</header>
+
+<div>
+<nav>
+<ul>
+<li><a href="index izakaya.html">トップ</a></li>
+<li><a href="menu izakaya.html">お品書き</a></li>
+<li><a href="about izakaya.html">こだわり</a></li>
+<li><a href="access izakaya.html">アクセス</a></li>
+</ul>
+</nav>
+
+<main>
+
+<section>
+<h2>MAP</h2>
+
+<div align="center">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15643.215200351458!2d133.36196749332143!3d34.48815472508277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3551110024a9e8fd%3A0x542ae8f823cbc2c7!2z5paw5pmC5LujIOW6g-Wztuemj-WxseWFg-eUuuW6lw!5e0!3m2!1sja!2sjp!4v1763090480867!5m2!1sja!2sjp"
+width="600" height="450" style="border:0;"
+allowfullscreen="" loading="lazy"
+referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</section>
+
+<br>
+
+<section>
+<h2>店舗情報</h2>
+
+<p>
+<strong>住所：</strong>広島県福山市元町１５番３１号<br>
+<strong>営業時間：</strong>月～日、祝日、祝前日: 16:00～翌0:00 （料理L.O. 23:00 ドリンクL.O. 23:00）<br>
+<strong>定休日：</strong>なし<br>
+<strong>電話番号：</strong>084-961-4566
+</p>
+</section>
+
+<br>
+<br>
+
+<nav>
+<ul>
+<li><a href="index izakaya.html">トップ</a></li>
+<li><a href="menu izakaya.html">お品書き</a></li>
+<li><a href="about izakaya.html">こだわり</a></li>
+<li><a href="access izakaya.html">アクセス</a></li>
+</ul>
+</nav>
+
+<br>
+<br>
+
+</main>
+</div>
+
+<footer>
+<p>Copyright 2026.</p>
+</footer>
+
+<script>
+function updateTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const hour = now.getHours();
+  const minute = now.getMinutes().toString().padStart(2, '0');
+  const second = now.getSeconds().toString().padStart(2, '0');
+
+  document.getElementById("currentTime").textContent =
+    "現在の日時： " + year + "年" + month + "月" + day + "日 " +
+    hour + "時" + minute + "分" + second + "秒";
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+
+</body>
+</html>
